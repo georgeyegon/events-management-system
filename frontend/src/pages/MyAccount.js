@@ -14,7 +14,7 @@ export default function MyAccount() {
       if (!token) return;
 
       try {
-        const response = await fetch('http://127.0.0.1:5000/my-account', {
+        const response = await fetch('https://events-manager-5wr8.onrender.com/my-account', {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${token}`,
@@ -47,7 +47,7 @@ export default function MyAccount() {
     );
 
     try {
-      const response = await fetch(`http://127.0.0.1:5000/users/${user.id}`, {
+      const response = await fetch(`https://events-manager-5wr8.onrender.com/users/${user.id}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
