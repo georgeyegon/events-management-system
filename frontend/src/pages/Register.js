@@ -13,7 +13,7 @@ export default function Register({ register_user }) {
   function handleSubmit(e) {
     e.preventDefault();
   
-    fetch('http://127.0.0.1:5000/users', {
+    fetch('https://events-manager-5wr8.onrender.com/users', {
       method: 'POST',
       body: JSON.stringify({
         username: username,
