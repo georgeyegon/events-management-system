@@ -35,7 +35,7 @@ const Event = ({ event, onBookingUpdate }) => {
 
   const checkBookingStatus = async (userId, eventId) => {
     try {
-      const response = await fetch(`http://127.0.0.1:5000/bookings/${userId}/${eventId}`);
+      const response = await fetch(`https://events-manager-5wr8.onrender.com/bookings/${userId}/${eventId}`);
       if (response.ok) {
         setIsBooked(true);
       } else {
@@ -54,7 +54,7 @@ const Event = ({ event, onBookingUpdate }) => {
 
     setIsLoading(true);
     try {
-      const response = await fetch('http://127.0.0.1:5000/bookings', {
+      const response = await fetch('https://events-manager-5wr8.onrender.com/bookings', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -87,7 +87,7 @@ const Event = ({ event, onBookingUpdate }) => {
 
     setIsLoading(true);
     try {
-      const response = await fetch(`http://127.0.0.1:5000/bookings/${user.id}/${event.id}`, {
+      const response = await fetch(`https://events-manager-5wr8.onrender.com/${user.id}/${event.id}`, {
         method: 'DELETE',
       });
 
