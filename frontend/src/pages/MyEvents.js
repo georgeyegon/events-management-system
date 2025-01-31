@@ -26,7 +26,7 @@ export default function MyEvents() {
 
   const fetchPostedEvents = async (adminId) => {
     try {
-      const response = await fetch(`http://127.0.0.1:5000/admin/events?admin_id=${adminId}`);
+      const response = await fetch(`https://events-manager-5wr8.onrender.com/admin/events?admin_id=${adminId}`);
       const events = await response.json();
 
       if (!response.ok) {
