@@ -7,7 +7,7 @@ export default function Home()
   const [searchTerm, setSearchTerm] = useState("")
 
   useEffect(()=>{
-    fetch("http://127.0.0.1:5000/events" )
+    fetch("https://events-manager-5wr8.onrender.com/events" )
     .then((res)=>res.json())
     .then((data)=>{
        setEvents(data)
