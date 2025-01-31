@@ -7,6 +7,11 @@ from flask_migrate import Migrate
 from flask_restful import Api
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import MetaData
+import os
+
+# Fetch the secret key from an environment variable (for production)
+SECRET_KEY = os.getenv('FLASK_SECRET_KEY', os.urandom(24))  # Default to a random key if not set
+
 
 # Local imports
 
