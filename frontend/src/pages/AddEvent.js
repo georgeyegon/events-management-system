@@ -55,7 +55,7 @@ export default function AddEvent() {
     }
 
     try {
-      const response = await fetch('http://127.0.0.1:5000/admin/add_event', {
+      const response = await fetch('https://events-manager-5wr8.onrender.com/admin/add_event', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
